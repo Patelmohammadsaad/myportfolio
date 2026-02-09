@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  backdrop-filter: blur(12px);
+  background: rgba(2,6,23,0.7);
+}
+
+.logo {
+  font-size: 24px;
+  color: #38bdf8;
+}
+.logo span {
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Sections */
+.section {
+  padding: 90px 50px;
+  text-align: center;
+}
+
+.home {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home h1 {
+  font-size: 42px;
+}
+.home span {
+  color: #38bdf8;
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Button */
+button {
+  margin-top: 30px;
+  padding: 14px 35px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(56,189,248,0.4);
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Skills */
+.skills, .projects {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.skill, .card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.skill:hover, .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(56,189,248,0.4);
+}
+
+/* Glow card */
+.glow {
+  border: 1px solid #38bdf8;
+}
+
+/* Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
