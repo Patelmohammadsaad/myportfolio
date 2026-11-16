@@ -16,5 +16,7 @@ COPY . .
 RUN python manage.py collectstatic --noinput
 
 # Apply database migrations at container start, then serve with Gunicorn.
+# Render sets its own $PORT (default 10000) — bind to it, or the deploy
+# fails with "Port scan timeout". Locally $PORT is unset, so 8000 is used.
 EXPOSE 8000
-CMD ["sh", "-c", "python manage.py migrate --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 2"]
+CMD ["sh", "-c", "python manage.py migrate --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers 2"]
