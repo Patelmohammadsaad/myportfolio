@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # Production mode inside Docker (set DJANGO_DEBUG=True only for debugging)
+      - DJANGO_DEBUG=False
+      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
+      # Change this before deploying publicly:
+      - DJANGO_SECRET_KEY=change-me-to-a-long-random-string
+      - DJANGO_DB_PATH=/app/data/db.sqlite3
+    volumes:
+      # Keep contact-form messages even after container restart
+      - sqlite_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:

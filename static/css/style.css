@@ -1,0 +1,236 @@
+/* Portfolio style — simple aur clean.
+   Rang badlne hain to sirf neeche wale :root wale rang badlo,
+   poori site ka rang apne aap badal jayega. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #0a2540;       /* gehara neela — headings, footer */
+  --blue: #1a73e8;       /* halka neela — buttons, links */
+  --light-blue: #e8f0fe; /* bahut halka neela — tags */
+  --text: #222;          /* likhai ka rang */
+  --muted: #555;         /* halki likhai */
+  --bg-alt: #f6f9fc;     /* alternate section ka background */
+  --border: #e0e6ed;     /* box ki border */
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Upar wala menu */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6%;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--navy); }
+.logo span { color: var(--blue); }
+.logo:hover { text-decoration: none; }
+.navbar nav { display: flex; gap: 24px; }
+.navbar nav a { color: var(--text); font-weight: 500; }
+.navbar nav a:hover { color: var(--blue); text-decoration: none; }
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Pehla hissa — naam wala bada banner */
+.hero {
+  padding: 90px 6% 70px;
+  background: linear-gradient(135deg, var(--navy), #123a63);
+  color: #fff;
+  text-align: center;
+}
+.hero-hello { color: #8ab4f8; font-weight: 600; letter-spacing: 1px; }
+.hero h1 { font-size: 2.8rem; margin: 8px 0; }
+.hero h2 { font-size: 1.3rem; font-weight: 500; color: #c2d7ff; margin-bottom: 16px; }
+.hero-text { max-width: 640px; margin: 0 auto 28px; color: #dbe7f5; }
+.hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero-links { margin-top: 26px; display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
+.hero-links a { color: #9ec1ff; font-weight: 500; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.btn:hover { text-decoration: none; }
+.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary:hover { background: #1557b0; }
+.btn-outline { border-color: #fff; color: #fff; }
+.btn-outline:hover { background: rgba(255, 255, 255, 0.15); }
+
+/* Har section ka common style */
+.section { padding: 64px 6%; max-width: 1080px; margin: 0 auto; }
+.section-alt { background: var(--bg-alt); max-width: none; }
+.section-alt > * { max-width: 1080px; margin-left: auto; margin-right: auto; }
+.section-title { font-size: 1.9rem; color: var(--navy); margin-bottom: 24px; text-align: center; }
+.sub-title { font-size: 1.2rem; color: var(--navy); margin: 36px 0 16px; text-align: center; }
+.section p { color: var(--muted); margin-bottom: 14px; }
+
+/* About wale 4 chhote boxes */
+.about-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+  text-align: center;
+}
+.about-facts div {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 10px;
+}
+.about-facts strong { display: block; color: var(--navy); }
+.about-facts span { font-size: 0.85rem; color: var(--muted); }
+
+/* Skills wale cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.skill-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+.skill-card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags-center { justify-content: center; }
+.tags span {
+  background: var(--light-blue);
+  color: #174ea6;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Project wale cards */
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.project-card h3 { color: var(--navy); margin-bottom: 12px; }
+.project-card ul { margin: 14px 0 18px 18px; color: var(--muted); }
+.project-card li { margin-bottom: 8px; }
+.card-link { margin-top: auto; font-weight: 600; }
+
+/* Experience wale boxes */
+.timeline { display: flex; flex-direction: column; gap: 20px; }
+.job {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.job h3 { color: var(--navy); }
+.job-company { color: var(--blue); font-weight: 500; margin: 0 !important; }
+.job-period {
+  background: var(--light-blue);
+  color: #174ea6;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.job ul { margin-left: 18px; color: var(--muted); }
+.job li { margin-bottom: 6px; }
+
+/* Contact hissa */
+.contact-intro { text-align: center; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  margin-top: 28px;
+  align-items: start;
+}
+.contact-info p { margin-bottom: 12px; color: var(--text); }
+.contact-form { display: flex; flex-direction: column; gap: 12px; }
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+}
+.contact-form input:focus,
+.contact-form textarea:focus { outline: 2px solid var(--blue); border-color: transparent; }
+.flash {
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 16px auto 0;
+  max-width: 560px;
+}
+.flash-success { background: #e6f4ea; color: #137333; }
+
+footer {
+  text-align: center;
+  padding: 28px 6%;
+  background: var(--navy);
+  color: #b0c4de;
+  font-size: 0.9rem;
+}
+
+/* Mobile — chhoti screen par sab ek ke neeche ek */
+@media (max-width: 760px) {
+  .hero h1 { font-size: 2rem; }
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    padding: 16px 6%;
+    border-bottom: 1px solid var(--border);
+  }
+  .navbar nav.open { display: flex; }
+  .menu-btn { display: block; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .about-facts { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+}

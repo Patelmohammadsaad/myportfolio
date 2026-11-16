@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 👇 Browser tab me dikhne wala naam -->
+  <title>Patel Mohammadsaad — Aspiring AI &amp; ML Engineer</title>
+  <meta name="description" content="Portfolio of Patel Mohammadsaad, B.E. IT (GTU) from Ahmedabad. Python, Machine Learning, Django. Data Science Intern at Sparks To Ideas.">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- ===== UPAR WALA MENU ===== -->
+<header class="navbar">
+  <a href="#home" class="logo">PM<span>.</span></a>
+  <nav id="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-btn" id="menu-btn" aria-label="Menu">&#9776;</button>
+</header>
+
+<main>
+  <!-- ===== HOME — sabse pehle dikhne wala hissa ===== -->
+  <!-- 👇 Yahan apna naam, title aur intro badlo -->
+  <section id="home" class="hero">
+    <p class="hero-hello">Hello, I'm</p>
+    <h1>Patel Mohammadsaad</h1>
+    <h2>Aspiring AI &amp; Machine Learning Engineer</h2>
+    <p class="hero-text">
+      B.E. Information Technology graduate (GTU, 2026) from Ahmedabad.
+      I build machine learning models and Django web apps — currently
+      interning in Data Science at Sparks To Ideas.
+    </p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="#projects">View My Projects</a>
+      <a class="btn btn-outline" href="{% static 'files/Patel_Mohammadsaad_Resume.pdf' %}" download>Download Resume</a>
+    </div>
+    <div class="hero-links">
+      <a href="https://www.linkedin.com/in/saadpatel26" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Patelmohammadsaad" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:saadpatel2023@gmail.com">saadpatel2023@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <!-- 👇 Apne baare me likha text yahan badlo -->
+  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I'm a B.E. Information Technology graduate from Gujarat Technological
+      University (2022–2026, CGPA 7.85/10), based in Ahmedabad, Gujarat.
+      I love turning data into something useful — cleaning messy datasets,
+      training models with Scikit-learn, and serving them through Django web apps
+      that anyone can use.
+    </p>
+    <p>
+      Right now I'm a Data Science Intern at Sparks To Ideas, learning the full
+      data science workflow from data collection to insights. I'm looking for an
+      entry-level AI/ML role where I can keep learning on real projects.
+    </p>
+    <!-- 👇 Neeche wale 4 boxes: number/text badlo, box copy karke naya bhi bana sakte ho -->
+    <div class="about-facts">
+      <div><strong>Ahmedabad, Gujarat</strong><span>Location</span></div>
+      <div><strong>B.E. IT, GTU (2026)</strong><span>Education</span></div>
+      <div><strong>7.85 / 10</strong><span>CGPA</span></div>
+      <div><strong>3 Internships</strong><span>Experience</span></div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <!-- 👇 Skill badlni ho to sirf <span> ke andar wala naam badlo.
+       Nayi skill ke liye ek <span> wali line copy karke paste kar do. -->
+  <section id="skills" class="section section-alt">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <div class="tags">
+          <span>Python</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Data Analysis &amp; Visualisation</h3>
+        <div class="tags">
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Matplotlib</span>
+          <span>Excel</span>
+          <span>EDA</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Machine Learning</h3>
+        <div class="tags">
+          <span>Scikit-learn</span>
+          <span>Linear Regression</span>
+          <span>Logistic Regression</span>
+          <span>Deep Learning fundamentals</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Generative AI &amp; LLMs</h3>
+        <div class="tags">
+          <span>Generative AI</span>
+          <span>Large Language Models</span>
+          <span>Prompt Engineering</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Web Development</h3>
+        <div class="tags">
+          <span>Django</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>WordPress</span>
+          <span>REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Tools</h3>
+        <div class="tags">
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>Docker</span>
+          <span>Jupyter Notebook</span>
+          <span>VS Code</span>
+          <span>PyCharm</span>
+        </div>
+      </div>
+    </div>
+    <h3 class="sub-title">Soft Skills</h3>
+    <div class="tags tags-center">
+      <span>Analytical Thinking</span>
+      <span>Problem Solving</span>
+      <span>Communication Skills</span>
+      <span>Team Collaboration</span>
+      <span>Time Management</span>
+      <span>Attention to Detail</span>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <!-- 👇 Naya project: poora <article> wala block copy karke paste kar do,
+       phir uska title, tech aur points badal do. -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>Laptop Price Prediction Web App</h3>
+        <div class="tags">
+          <span>Python</span>
+          <span>Django</span>
+          <span>Scikit-learn</span>
+          <span>Pandas</span>
+          <span>HTML</span>
+        </div>
+        <ul>
+          <li>Trained a Linear Regression model to predict laptop prices and saved it as a .pkl file with Pickle.</li>
+          <li>Built a Django web app that loads the model in views.py, takes laptop specs from an HTML form and shows the predicted price.</li>
+        </ul>
+        <a class="card-link" href="https://github.com/Patelmohammadsaad" target="_blank" rel="noopener">Code on GitHub &rarr;</a>
+      </article>
+      <article class="project-card">
+        <h3>Titanic Survival Prediction</h3>
+        <div class="tags">
+          <span>Python</span>
+          <span>Scikit-learn</span>
+          <span>Django</span>
+        </div>
+        <ul>
+          <li>Cleaned the 891-row Titanic dataset (Age median 28, Gender encoded) and split it 80/20.</li>
+          <li>Logistic Regression reached 80.4% test accuracy, beating Random Forest (~79%).</li>
+          <li>Built a Django app with a 4-input form predicting Survived / Not Survived with survival probability.</li>
+        </ul>
+        <a class="card-link" href="https://github.com/Patelmohammadsaad" target="_blank" rel="noopener">Code on GitHub &rarr;</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <!-- 👇 Nayi job/internship: poora <article> wala block copy karke paste kar do,
+       sabse upar wali job sabse nayi hoti hai. -->
+  <section id="experience" class="section section-alt">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <h3>Data Science Intern</h3>
+            <p class="job-company">Sparks To Ideas, Ahmedabad</p>
+          </div>
+          <span class="job-period">June 2026 – Present</span>
+        </div>
+        <ul>
+          <li>Structured training in data science with mentorship from industry professionals.</li>
+          <li>Python, data cleaning, exploratory data analysis and machine learning fundamentals on guided real-world datasets.</li>
+          <li>Hands-on exposure to the full data science workflow — from data collection to insights.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <h3>Web Developer Intern (WordPress)</h3>
+            <p class="job-company">Strive Digitals Pvt. Ltd., Ahmedabad</p>
+          </div>
+          <span class="job-period">Jan 2026 – Apr 2026</span>
+        </div>
+        <ul>
+          <li>Developed and maintained WordPress websites.</li>
+          <li>Implemented responsive pages using HTML, CSS, JavaScript and PHP.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <h3>Web Development Intern (Django)</h3>
+            <p class="job-company">InfoLabz IT Services Pvt. Ltd., Ahmedabad</p>
+          </div>
+          <span class="job-period">July 2025</span>
+        </div>
+        <ul>
+          <li>Learned Django framework fundamentals with MVC architecture.</li>
+          <li>Worked on JSON data structures and implemented API integration and fetching in web pages.</li>
+        </ul>
+      </article>
+    </div>
+
+    <h3 class="sub-title">Education</h3>
+    <article class="job">
+      <div class="job-head">
+        <div>
+          <h3>Bachelor of Engineering (B.E.) — Information Technology</h3>
+          <p class="job-company">Gujarat Technological University (GTU)</p>
+        </div>
+        <span class="job-period">2022 – 2026</span>
+      </div>
+      <ul><li>CGPA: 7.85 / 10</li></ul>
+    </article>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <!-- 👇 Apna email / phone / links yahan badlo. Form waala hissa mat chhedo. -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="contact-intro">
+      Open to AI/ML intern and entry-level roles in Ahmedabad (on-site / hybrid).
+      Send me a message — I usually reply within a day.
+    </p>
+
+    {% if messages %}
+      {% for message in messages %}
+      <p class="flash flash-success">{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:saadpatel2023@gmail.com">saadpatel2023@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919409019115">+91 94090 19115</a></p>
+        <p><strong>Location:</strong> Ahmedabad, Gujarat, India</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saadpatel26" target="_blank" rel="noopener">linkedin.com/in/saadpatel26</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Patelmohammadsaad" target="_blank" rel="noopener">github.com/Patelmohammadsaad</a></p>
+      </div>
+      <form method="post" action="{% url 'home' %}#contact" class="contact-form">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Patel Mohammadsaad &middot; Built with Django &amp; Docker</p>
+</footer>
+
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
